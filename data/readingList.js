@@ -1,6 +1,10 @@
+// base book list array
+
 let bookList = []
 
 let selectedBook = {}
+
+// calls the necessary function based on what the user selects
 
 module.exports = {
      getAllBooks() {
