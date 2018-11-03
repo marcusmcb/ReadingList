@@ -6,6 +6,8 @@ const path = require('path')
 
 const app = express()
 
+var PORT = process.env.PORT || 3001;
+
 // sets up views, routing and parsing dependencies
 
 app.use(express.static(path.join(__dirname, 'public')))
