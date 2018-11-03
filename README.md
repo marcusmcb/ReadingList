@@ -34,11 +34,11 @@ This option will allow you to delete a book from your master reading list if you
 
 Programming elements used in this application include:
 
-Javascript
-Bootstrap CSS
-Node.JS & related NPMs
-React
-JSX
+* Javascript
+* Bootstrap CSS
+* Node.JS & related NPMs
+* React
+* JSX
 
 Marcus McBride, UCI Coding Bootcamp 2018.
 
