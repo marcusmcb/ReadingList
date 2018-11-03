@@ -1,27 +1,36 @@
-// brings in Node dependencies
-
 const React = require('react')
 const Form = require('./form')
 
-// HTML for nav component and form dependency
+const Page = () =>
 
-<html lang="en">
-<head>
-     <meta charset="UTF-8"/>
-     <meta name="viewPort" content="width=device-width, initial-scale=1.0"/>
-     <meta httpEquiv="X-UA-Compatible" content="ie=edge"/>
-     <title>Reading List</title>
-</head>
-<body>
+  <html lang='en'>
+    <head>
+      <meta charSet='UTF-8' />
+      <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+      <meta httpEquiv='X-UA-Compatible' content='ie=edge' />
+      <title>Reading List</title>
+      <link href='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO' crossOrigin='anonymous' />
+    </head>
+    <body>
+      <div className="container">
+        <div className="jumbotron jumbotron-fluid">
+          <div className="container">
+            <h1 className="display-4 text-center text-dark">Reading List</h1>
+            <p className="lead text-center">Add books into your reading list.</p>
+          </div>
+          
+              <nav className="navbar-light bg-light">
+        <ul className='pagination justify-content-center'>
+          <li className='page-item'><a className='page-link' href='/'>Add Book</a></li>
+          <li className='page-item'><a className='page-link text-secondary' href='/list'>View Reading List</a></li>
+        </ul>
+      </nav>
+      
+      <Form />
+      <script src='/js/index.js' />
+      </div>
+      </div>
+    </body>
+  </html>
 
-     <nav aria-label='Page navigation example'>
-          <ul className='pagination'>
-               <li className='page-item active'><a className='page-link' href='/'>Add Book</a></li>
-               <li className='page-item'><a className='page-link' href='/list'>Reading List</a></li>
-          </ul>
-     </nav>
-     <Form />
-     <script src='/js/index.js' />
-     
-</body>
-</html>
+module.exports = Page

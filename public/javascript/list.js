@@ -1,6 +1,6 @@
 const fetch = window.fetch
 
-// sets up functionality for the click event
+// click event handler for edit function
 
 document.addEventListener('click', event => {
      if (event.target && event.target.id === 'editBTN') {
@@ -10,6 +10,9 @@ document.addEventListener('click', event => {
                     window.location = './book'
                })
                .catch(e => console.error(e))
+
+          // click event handler for delete function
+
      } else if (event.target && event.target.id === 'deleteBTN') {
           fetch(`/books/${event.target.getAttribute('data-id')}`, { method: 'DELETE' })
                .then(r => {

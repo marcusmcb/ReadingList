@@ -1,11 +1,9 @@
 const fetch = window.fetch
 
-// module to add a new book to the reading list
+// click event handler for adding books to thr list
 
 document.querySelector('#addBook').addEventListener('click', event => {
-     
      event.preventDefault()
-     
      fetch('/books', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json; charset=utf-8' },

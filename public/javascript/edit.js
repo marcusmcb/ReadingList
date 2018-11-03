@@ -1,9 +1,9 @@
 const fetch = window.fetch
 
+// click event handler for the edit book function
+
 document.querySelector('#editBook').addEventListener('click', event => {
-     
-     event.preventDefault();
-     
+     event.preventDefault()
      fetch(`/books/${document.querySelector('#bookTitle').value}`, {
           method: 'PUT',
           headers: { 'Content-Type': 'application/json; charset=utf-8' },

@@ -1,6 +1,5 @@
-// routing module
-
 module.exports = (app) => {
-     require('./bookRoutes')(app)
-     require('./htmlRoutes')(app)
+  
+  require('./bookRoutes')(app)
+  require('./htmlRoutes')(app)
 }

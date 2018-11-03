@@ -1,31 +1,30 @@
-// base book list array
+// variables for setting up the initial reading list array
 
-let bookList = []
-
+let books = []
 let selectedBook = {}
 
-// calls the necessary function based on what the user selects
+// sets up functionality for retreiving, adding, updating and deleting book entries
 
 module.exports = {
-     getAllBooks() {
-          return bookList
-     },
-     getBook() {
-          return selectedBook
-     },
-     addNewBook(book) {
-          bookList.push(book)
-     },
-     updateBook(id, book) {
-          const index = bookList.findIndex(bookItem => bookItem.id === id)
-          bookList[index] = book
-     },
-     deleteBook(id) {
-          const index = bookList.findIndex(bookItem => bookItem.id === id)
-          bookList.splice(index, 1)
-     },
-     setBook(id) {
-          const index = bookList.findIndex(bookItem => bookItem.id === id)
-          selectedBook = bookList[index]
-     }
+  getBooks () {
+    return books
+  },
+  setBook (id) {
+    const index = books.findIndex(bookThing => bookThing.id === id)
+    selectedBook = books[index]
+  },
+  getBook () {
+    return selectedBook
+  },
+  addBook (book) {
+    books.push(book)
+  },
+  updateBook (id, book) {
+    const index = books.findIndex(bookThing => bookThing.id === id)
+    books[index] = book
+  },
+  deleteBook (id) {
+    const index = books.findIndex(bookThing => bookThing.id === id)
+    books.splice(index, 1)
+  }
 }
