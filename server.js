@@ -6,8 +6,6 @@ const path = require('path')
 
 const app = express()
 
-var PORT = process.env.PORT || 3001;
-
 // sets up views, routing and parsing dependencies
 
 app.use(express.static(path.join(__dirname, 'public')))
@@ -20,4 +18,6 @@ app.engine('jsx', require('express-react-views').createEngine())
 
 require('./routes')(app)
 
-app.listen(3000, () => console.log('http://localhost:3000'))
+var PORT = process.env.PORT || 3000;
+
+app.listen(PORT, () => console.log('http://localhost:3000'))
